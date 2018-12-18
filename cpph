@@ -1,0 +1,14 @@
+#ifndef INCLUSIONGUARD
+#define INCLUSIONGUARD
+
+class CLASSNAME {
+
+  public:
+    CLASSNAME();
+    ~CLASSNAME();
+  protected:
+  private:
+
+};
+
+#endif
