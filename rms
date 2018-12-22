@@ -74,6 +74,14 @@ create_terrain FOREST {
   set_avoid_player_start_areas
   spacing_to_other_terrain_types 5
 }
+create_terrain FOREST {
+  base_terrain GRASS /* change to base terrain of the map */
+  land_percent 1
+  number_of_clumps 3
+  set_scale_by_groups
+  set_avoid_player_start_areas
+  spacing_to_other_terrain_types 3
+}
 
 <CONNECTION_GENERATION> /* bridges/roads */
 
@@ -508,4 +516,42 @@ endif
 create_object HAWK {
   number_of_objects 6
   set_scaling_to_map_size
+}
+
+/* fishies */
+create_object SHORE_FISH {
+  temp_min_distance_group_placement 25
+  number_of_objects 999999
+}
+create_object SHORE_FISH {
+  temp_min_distance_group_placement 15
+  number_of_objects 999999
+}
+
+create_object FISH {
+  temp_min_distance_group_placement 12
+  max_distance_to_other_zones 2
+  number_of_objects 99999
+  min_distance_group_placement 2
+}
+
+create_object SNAPPER {
+  temp_min_distance_group_placement 6
+  max_distance_to_other_zones 4
+  number_of_objects 99999
+  min_distance_group_placement 3
+}
+
+create_object MARLIN1 {
+  temp_min_distance_group_placement 12
+  max_distance_to_other_zones 5
+  number_of_objects 99999
+  min_distance_group_placement 3
+}
+
+create_object MARLIN2 {
+  temp_min_distance_group_placement 8
+  max_distance_to_other_zones 7
+  number_of_objects 99999
+  min_distance_group_placement 3
 }

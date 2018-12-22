@@ -157,8 +157,6 @@ output:
 \pagestyle{plain}
 \tableofcontents
 \newpage
-\lstlistoflistings
-\newpage
 \pagestyle{fancy}
 
 \newpage
