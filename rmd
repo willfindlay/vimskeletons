@@ -171,6 +171,7 @@ output:
     fig_caption: true
     keep_tex: false
 ---
+\counterwithin{lstlisting}{section}
 \newpage
 \pagestyle{plain}
 \tableofcontents
