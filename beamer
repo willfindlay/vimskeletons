@@ -1,0 +1,70 @@
+---
+author: |
+  | William Findlay
+title: |
+  | Untitled
+date: \today
+bibliography: /home/housedhorse/.bibs/uni.bib
+csl: /home/housedhorse/.bibs/ieee.csl
+subparagraph: yes
+header-includes: |
+  ``` {=latex}
+  \usepackage{float}
+  \usepackage{listings}
+  \usepackage[hang,bf]{caption}
+  \usepackage{framed}
+  \usepackage[section]{placeins}
+
+  \allowdisplaybreaks
+
+  % fancy headers/footers
+  \makeatletter
+  \usepackage{fancyhdr}
+  \lhead{\@author}
+  \chead{}
+  \rhead{\@title}
+  \lfoot{}
+  \cfoot{\thepage}
+  \rfoot{}
+  \renewcommand{\headrulewidth}{0.4pt}
+
+  \usepackage{amsmath, amsfonts,amssymb, amsthm}
+  \usepackage{siunitx}
+  \usepackage[boxruled,lined,linesnumbered,titlenumbered]{algorithm2e}
+
+  \usepackage{setspace}
+  \usepackage{changepage}
+  \usepackage{aliascnt}
+
+  \floatplacement{figure}{!htb}
+  \floatplacement{table}{!htb}
+  \floatplacement{listing}{!htb}
+  \lstset{mathescape=true,numbers=left,breaklines=true,frame=single,language=C,captionpos=b,abovecaptionskip={\abovecaptionskip},belowcaptionskip={\belowcaptionskip},aboveskip=\intextsep}
+  \setlength{\captionmargin}{1in}
+
+  \newcommand{\blackbox}{\hfill$\blacksquare$}
+  \usepackage{tikz}
+  \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+              \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+  \let\lil\lstinputlisting
+  \usepackage{afterpage}
+  \usepackage{xcolor}
+  \hypersetup{colorlinks, allcolors=., urlcolor=blue}
+
+  \usepackage{pifont}
+
+  \setbeamertemplate{itemize item}{$\bullet$}
+  \setbeamertemplate{itemize subitem}{\ding{226}}
+  \setbeamertemplate{itemize subsubitem}{\textbullet}
+  ```
+output:
+  beamer_presentation:
+      colortheme: dolphin
+      slide_level: 2
+---
+\tableofcontents
+\newpage
+
+\newpage
+# References {-}

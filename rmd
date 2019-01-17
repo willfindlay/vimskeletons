@@ -14,6 +14,9 @@ header-includes: |
   \usepackage[hang,bf]{caption}
   \usepackage{framed}
   \usepackage[section]{placeins}
+  \usepackage[dvipsnames]{xcolor}
+
+  \usepackage{pifont}
 
   \allowdisplaybreaks
 
@@ -37,10 +40,12 @@ header-includes: |
   \usepackage[explicit]{titlesec}
   \usepackage{aliascnt}
 
-  \floatplacement{figure}{!htb}
-  \floatplacement{table}{!htb}
-  \floatplacement{listing}{!htb}
-  \lstset{mathescape=true,numbers=left,breaklines=true,frame=single,language=C,captionpos=b,abovecaptionskip={\abovecaptionskip},belowcaptionskip={\belowcaptionskip},aboveskip=\intextsep}
+  \floatplacement{figure}{!htbp}
+  \floatplacement{table}{!htbp}
+  \floatplacement{listing}{!htbp}
+  \lstset{numbers=left,breaklines=true,frame=single,language=C,captionpos=b,abovecaptionskip={\abovecaptionskip},
+  belowcaptionskip={\belowcaptionskip},aboveskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
+  commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}}}
   \setlength{\captionmargin}{1in}
 
   \newgeometry{margin=1in}
@@ -126,9 +131,10 @@ header-includes: |
   \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
               \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 
-  \renewcommand{\labelitemi}{$\bullet$}
-  \renewcommand{\labelitemiii}{\textbullet}
-  \renewcommand{\labelitemiv}{-}
+  \renewcommand{\labelitemi}{\large$\bullet$}
+  \renewcommand{\labelitemii}{\ding{226}}
+  \renewcommand{\labelitemiii}{\tiny$\blacksquare$}
+  \renewcommand{\labelitemiv}{\small$\triangleright$}
 
   \titleformat{\paragraph}
   {\itshape}
@@ -145,6 +151,18 @@ header-includes: |
   \usepackage{afterpage}
   \usepackage{xcolor}
   \hypersetup{colorlinks, allcolors=., urlcolor=blue}
+
+  \usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+  \makeatletter
+  \patchcmd{\lst@GLI@}% <command>
+    {\def\lst@firstline{#1\relax}}% <search>
+    {\def\lst@firstline{#1\relax}\def\lst@firstnumber{#1\relax}}% <replace>
+    {\typeout{listings firstnumber=firstline}}% <success>
+    {\typeout{listings firstnumber not set}}% <failure>
+  \makeatother
+
+  \usepackage{chngcntr}
+  \counterwithin{figure}{section}
   ```
 output:
   pdf_document:
@@ -162,4 +180,3 @@ output:
 \newpage
 \pagestyle{plain}
 # References {-}
-
