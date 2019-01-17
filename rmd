@@ -43,7 +43,7 @@ header-includes: |
   \floatplacement{figure}{!htbp}
   \floatplacement{table}{!htbp}
   \floatplacement{listing}{!htbp}
-  \lstset{numbers=left,breaklines=true,frame=single,language=C,captionpos=b,abovecaptionskip={\abovecaptionskip},
+  \lstset{numbers=left,breaklines=true,frame=single,language=Python,captionpos=b,abovecaptionskip={\abovecaptionskip},
   belowcaptionskip={\belowcaptionskip},aboveskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
   commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}}}
   \setlength{\captionmargin}{1in}
