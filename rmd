@@ -136,16 +136,21 @@ header-includes: |
   \renewcommand{\labelitemiii}{\tiny$\blacksquare$}
   \renewcommand{\labelitemiv}{\small$\triangleright$}
 
-  \titleformat{\paragraph}
-  {\itshape}
-  {}
-  {0em}
-  {\underline{#1}}[ ]
-  \titleformat{\subparagraph}
-  {\itshape}
-  {}
-  {0em}
-  {#1}[ ]
+  \titleformat{\paragraph} % command to change
+  [runin]                  % shape  (runin, etc.)
+  {\small\bfseries}              % format (bfseries, itshape, etc.)
+  {}                       % label  (thesection, thesubsection, etc.)
+  {0em}                    % separation between label and body
+  {#1}        % before the body
+  []                       % after the body
+
+  \titleformat{\subparagraph} % command to change
+  [runin]                  % shape  (runin, etc.)
+  {\small\bfseries}              % format (bfseries, itshape, etc.)
+  {}                       % label  (thesection, thesubsection, etc.)
+  {0em}                    % separation between label and body
+  {#1}        % before the body
+  []                       % after the body
 
   \let\lil\lstinputlisting
   \usepackage{afterpage}
