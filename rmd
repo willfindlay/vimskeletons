@@ -8,13 +8,13 @@ bibliography: /home/housedhorse/.bibs/uni.bib
 csl: /home/housedhorse/.bibs/ieee.csl
 subparagraph: yes
 header-includes: |
-  ``` {=latex}
+  ```{=latex}
   \usepackage{float}
   \usepackage{listings}
   \usepackage[hang,bf]{caption}
   \usepackage{framed}
   \usepackage[section]{placeins}
-  \usepackage[dvipsnames]{xcolor}
+  \usepackage[dvipsnames,table]{xcolor}
 
   \usepackage{pifont}
 
@@ -23,7 +23,7 @@ header-includes: |
   % fancy headers/footers
   \makeatletter
   \usepackage{fancyhdr}
-  \lhead{\@author}
+  \lhead{William Findlay et al.}
   \chead{}
   \rhead{\@title}
   \lfoot{}
@@ -154,7 +154,6 @@ header-includes: |
 
   \let\lil\lstinputlisting
   \usepackage{afterpage}
-  \usepackage{xcolor}
   \hypersetup{colorlinks, allcolors=., urlcolor=blue}
 
   \usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
@@ -168,6 +167,23 @@ header-includes: |
 
   \usepackage{chngcntr}
   \counterwithin{figure}{section}
+  \counterwithin{table}{section}
+
+  \usepackage{booktabs}
+  \usepackage{longtable}
+  \usepackage{array}
+  \usepackage{multirow}
+  \usepackage{wrapfig}
+  \usepackage{float}
+  \usepackage{colortbl}
+  \usepackage{pdflscape}
+  \usepackage{tabu}
+  \usepackage{threeparttable}
+  \usepackage{threeparttablex}
+  \usepackage[normalem]{ulem}
+  \usepackage{makecell}
+  \pagestyle{fancy}
+  \usepackage{lipsum}
   ```
 output:
   pdf_document:
@@ -176,13 +192,24 @@ output:
     fig_caption: true
     keep_tex: false
 ---
+```{r,echo=FALSE}
+options(kableExtra.latex.load_packages = FALSE)
+library(kableExtra)
+```
+\thispagestyle{empty}
 \counterwithin{lstlisting}{section}
 \newpage
-\pagestyle{plain}
+\pagenumbering{roman}
+\thispagestyle{plain}
 \tableofcontents
 \newpage
-\pagestyle{fancy}
+\thispagestyle{plain}
+\listoffigures
+\listoftables
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
 
 \newpage
-\pagestyle{plain}
+\thispagestyle{plain}
 # References {-}
