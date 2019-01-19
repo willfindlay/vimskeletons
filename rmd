@@ -192,7 +192,8 @@ output:
     fig_caption: true
     keep_tex: false
 ---
-```{r,echo=FALSE}
+```{r,include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
 options(kableExtra.latex.load_packages = FALSE)
 library(kableExtra)
 ```
