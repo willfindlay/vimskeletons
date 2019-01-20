@@ -23,7 +23,7 @@ header-includes: |
   % fancy headers/footers
   \makeatletter
   \usepackage{fancyhdr}
-  \lhead{William Findlay et al.}
+  \lhead{\@author}
   \chead{}
   \rhead{\@title}
   \lfoot{}
