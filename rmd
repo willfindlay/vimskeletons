@@ -44,12 +44,9 @@ header-includes: |
 
   \floatplacement{figure}{!htbp}
   \floatplacement{table}{!htbp}
-  \lstset{float={!htbp},numbers=left,breaklines=true,frame=single,language=Python,captionpos=b,abovecaptionskip={\abovecaptionskip},
-  belowcaptionskip={\belowcaptionskip},aboveskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
+  \lstset{numbers=left,breaklines=true,frame=single,language=Python,captionpos=t,abovecaptionskip={\abovecaptionskip},
+  belowcaptionskip={0.5em},aboveskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
   commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}}}
-  \makeatletter
-  \let\lst@floatdefault\lst@float
-  \makeatother
   \setlength{\captionmargin}{1in}
 
   \newgeometry{margin=1in}
