@@ -14,7 +14,9 @@ header-includes: |
   \usepackage[hang,bf]{caption}
   \usepackage{framed}
   \usepackage[section]{placeins}
-  \usepackage[dvipsnames,table]{xcolor}
+
+  \PassOptionsToPackage{table,usenames,dvipsnames}{xcolor}
+  \usepackage{xcolor}
 
   \usepackage{pifont}
 
@@ -212,5 +214,5 @@ library(kableExtra)
 \setcounter{page}{1}
 
 \newpage
-\thispagestyle{plain}
-# References {-}
+\thispagestyle{empty}
+\section*{References}
