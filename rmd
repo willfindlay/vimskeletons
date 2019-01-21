@@ -9,14 +9,14 @@ csl: /home/housedhorse/.bibs/ieee.csl
 subparagraph: yes
 header-includes: |
   ```{=latex}
+  \UseRawInputEncoding
   \usepackage{float}
   \usepackage{listings}
   \usepackage[hang,bf]{caption}
   \usepackage{framed}
   \usepackage[section]{placeins}
 
-  \PassOptionsToPackage{table,usenames,dvipsnames}{xcolor}
-  \usepackage{xcolor}
+  \usepackage[dvipsnames,table]{xcolor}
 
   \usepackage{pifont}
 
@@ -44,10 +44,12 @@ header-includes: |
 
   \floatplacement{figure}{!htbp}
   \floatplacement{table}{!htbp}
-  \floatplacement{listing}{!htbp}
-  \lstset{numbers=left,breaklines=true,frame=single,language=Python,captionpos=b,abovecaptionskip={\abovecaptionskip},
+  \lstset{float={!htbp},numbers=left,breaklines=true,frame=single,language=Python,captionpos=b,abovecaptionskip={\abovecaptionskip},
   belowcaptionskip={\belowcaptionskip},aboveskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
   commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}}}
+  \makeatletter
+  \let\lst@floatdefault\lst@float
+  \makeatother
   \setlength{\captionmargin}{1in}
 
   \newgeometry{margin=1in}
@@ -167,6 +169,7 @@ header-includes: |
     {\typeout{listings firstnumber not set}}% <failure>
   \makeatother
 
+  \renewcommand\lstlistlistingname{List of Listings}
   \usepackage{chngcntr}
   \counterwithin{figure}{section}
   \counterwithin{table}{section}
@@ -185,7 +188,6 @@ header-includes: |
   \usepackage[normalem]{ulem}
   \usepackage{makecell}
   \pagestyle{fancy}
-  \usepackage{lipsum}
   ```
 output:
   pdf_document:
@@ -209,6 +211,7 @@ library(kableExtra)
 \thispagestyle{plain}
 \listoffigures
 \listoftables
+\lstlistoflistings
 \newpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
