@@ -139,19 +139,19 @@ header-includes: |
 
   \titleformat{\paragraph} % command to change
   [runin]                  % shape  (runin, etc.)
-  {\small\bfseries}              % format (bfseries, itshape, etc.)
+  {\bfseries}              % format (bfseries, itshape, etc.)
   {}                       % label  (thesection, thesubsection, etc.)
   {0em}                    % separation between label and body
   {#1}        % before the body
-  []                       % after the body
+  [.]                       % after the body
 
   \titleformat{\subparagraph} % command to change
   [runin]                  % shape  (runin, etc.)
-  {\small\bfseries}              % format (bfseries, itshape, etc.)
+  {\itshape}              % format (bfseries, itshape, etc.)
   {}                       % label  (thesection, thesubsection, etc.)
   {0em}                    % separation between label and body
   {#1}        % before the body
-  []                       % after the body
+  [.]                       % after the body
 
   \let\lil\lstinputlisting
   \usepackage{afterpage}
