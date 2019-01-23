@@ -9,7 +9,6 @@ csl: /home/housedhorse/.bibs/ieee.csl
 subparagraph: yes
 header-includes: |
   ```{=latex}
-  \UseRawInputEncoding
   \usepackage{float}
   \usepackage{listings}
   \usepackage[hang,bf]{caption}
