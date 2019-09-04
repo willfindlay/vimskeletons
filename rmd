@@ -25,10 +25,11 @@ options(kableExtra.latex.load_packages = FALSE)
 library(kableExtra)
 library(lubridate)
 ```
-\thispagestyle{plain}
+\pagestyle{fancy}
 \counterwithin{lstlisting}{section}
 \renewcommand{\maketitle}{\oldmaketitle}
 \maketitle
+\thispagestyle{empty}
 \newpage
 \pagenumbering{roman}
 \thispagestyle{plain}
