@@ -17,7 +17,6 @@ output:
       fig_crop: true
       fig_caption: true
       keep_tex: false
-    word_document: default
 ---
 ```{r,include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
