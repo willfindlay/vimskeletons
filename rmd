@@ -6,7 +6,7 @@ title: |
 subtitle: |
   | Untitled
 date: \today
-bibliography: /home/housedhorse/.bibs/uni.bib
+#bibliography: bib.bib
 csl: /home/housedhorse/.bibs/ieee.csl
 subparagraph: yes
 header-includes:
@@ -24,24 +24,34 @@ options(kableExtra.latex.load_packages = FALSE)
 library(kableExtra)
 library(lubridate)
 ```
+<!-- Setup -->
 \pagestyle{fancy}
 \counterwithin{lstlisting}{section}
 \renewcommand{\maketitle}{\oldmaketitle}
+
+<!-- Title page -->
 \maketitle
 \thispagestyle{empty}
+
+<!-- Table of contents -->
 \newpage
 \pagenumbering{roman}
 \thispagestyle{plain}
 \tableofcontents
+
+<!-- List of figs, tables, listings -->
 \newpage
 \thispagestyle{plain}
 \listoffigures
 \listoftables
 \lstlistoflistings
+
+<!-- Setup the rest of the document -->
 \newpage
 \pagenumbering{arabic}
 \setcounter{page}{1}
 
+<!-- References -->
 \newpage
-\thispagestyle{empty}
+\thispagestyle{plain}
 \section*{References}
