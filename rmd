@@ -6,17 +6,18 @@ title: |
 subtitle: |
   | Untitled
 date: \today
-#bibliography: bib.bib
-csl: /home/housedhorse/.bibs/ieee.csl
+bibliography: gr1.bib
+biblio-style: ieee
 subparagraph: yes
 header-includes:
     - \usepackage{findlayrmd}
 output:
     pdf_document:
-      number_sections: true
-      fig_crop: true
-      fig_caption: true
-      keep_tex: false
+        citation_package: biblatex
+        number_sections: true
+        fig_crop: true
+        fig_caption: true
+        keep_tex: false
 ---
 ```{r,include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -53,5 +54,3 @@ library(lubridate)
 
 <!-- References -->
 \newpage
-\thispagestyle{plain}
-\section*{References}
