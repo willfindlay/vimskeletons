@@ -54,4 +54,4 @@ library(lubridate)
 \setcounter{page}{1}
 
 <!-- References -->
-\newpage
+\clearpage
