@@ -9,6 +9,7 @@ date: \today
 #bibliography: untitled.bib
 biblio-style: ieee
 subparagraph: yes
+classoption: 12pt
 header-includes:
     - \usepackage{findlayrmd}
 output:
