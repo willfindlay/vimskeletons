@@ -40,7 +40,6 @@ library(lubridate)
 <!-- Table of contents -->
 \newpage
 \pagenumbering{roman}
-\thispagestyle{plain}
 \tableofcontents
 
 <!-- List of figs, tables, listings -->
