@@ -15,7 +15,7 @@ numbersections: true
 # It's annoying that I have to add this but okay pandoc...
 linkcolor: black
 urlcolor: blue
-citecolor: green
+citecolor: Green
 ---
 <!-- Title page -->
 \maketitle
