@@ -8,9 +8,10 @@ subtitle: |
 date: \today
 subparagraph: yes
 documentclass: findlay
-header-includes: |
-    %\addbibresource{/path/to/bib}
+header-includes:
+    #- \addbibresource{/path/to/bib}
 classoption: 12pt
+indent: true
 numbersections: true
 # It's annoying that I have to add this but okay pandoc...
 linkcolor: black
