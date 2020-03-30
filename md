@@ -22,12 +22,10 @@ citecolor: Green
 \maketitle
 \thispagestyle{empty}
 
-<!-- Comment this for normal spacing -->
-\onehalfspacing
-
 <!-- Table of contents -->
 \newpage
-\pagenumbering{roman}
+\begingroup
+\hypersetup{linkcolor=black}
 \tableofcontents
 
 <!-- List of figs, tables, listings -->
@@ -37,6 +35,10 @@ citecolor: Green
 \listoftables
 \newpage
 \lstlistoflistings
+\endgroup
+
+<!-- Comment this for normal spacing -->
+\onehalfspacing
 
 <!-- Setup the rest of the document -->
 \newpage
